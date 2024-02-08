@@ -1,0 +1,28 @@
+# https://github.com/99designs/aws-vault/releases
+aws-vault 7.2.0
+
+# PLUGIN: https://github.com/fredZen/asdf-babashka
+# RELEASES: https://github.com/babashka/babashka/releases
+babashka 1.3.188
+
+# PLUGIN: https://github.com/ucpr/asdf-circleci-cli
+# RELEASES: https://github.com/CircleCI-Public/circleci-cli/releases
+circleci-cli 0.1.29936
+
+# PLUGIN: https://github.com/rynkowsg/asdf-opentofu.git
+# RELEAES: https://github.com/opentofu/opentofu/releases
+# CHANGELOG: https://github.com/opentofu/opentofu/blob/main/CHANGELOG.md
+opentofu 1.6.1
+
+# PLUGIN: https://github.com/asdf-community/asdf-hashicorp
+# RELEASES: https://github.com/hashicorp/terraform/releases
+terraform 1.6.1
+
+# PLUGIN: https://github.com/ohmer/asdf-terragrunt
+# RELEASES: https://github.com/gruntwork-io/terragrunt/releases
+terragrunt 0.55.1
+
+#
+# Terragrunt & Terraform/OpenTofu compatibility:
+# https://terragrunt.gruntwork.io/docs/getting-started/supported-versions/
+#

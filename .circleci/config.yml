@@ -1,0 +1,29 @@
+version: 2.1
+
+# Base images:
+# - https://circleci.com/developer/images/image/cimg/base
+# - https://hub.docker.com/r/cimg/base/tags
+docker_base_small: &docker_base_small
+  docker: [{ image: "cimg/base:sha256:0d60890fb8328c088cc8c793468f399137361ccd1f1a916d52a797f4f4975090" }]  # tag: 2023.10
+  resource_class: small
+
+# https://hub.docker.com/r/alpine/terragrunt/tags
+# https://github.com/alpine-docker/terragrunt
+docker_terragrunt_small: &docker_terragrunt_small
+  docker: [{ image: "alpine/terragrunt@sha256:14c75c8a3dea1612d51f4016c712d63b0be42457c5cc4b531f35b7c67628adeb" }] # 1.5.7
+  resource_class: small
+
+jobs:
+  test:
+    <<: *docker_terragrunt_small
+    steps:
+      - checkout
+      - run:
+          name: Install deps
+          command: ./@bin/_ci/install_ci_deps.bash
+
+
+workflows:
+  tests:
+    jobs:
+      - test
